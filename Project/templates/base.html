@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Wildlife Control Services{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+    </style>
+
+  </head>
+
+
+<body class="bg-white">
+
+    <!-- header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col">
+            <div class="flex justify-between items-center h-16">
+              <div class="flex items-center">
+                <a href="#" class="text-2xl font-['Pacifico'] text-primary"
+                  >WildCare</a
+                >
+              </div>
+              <div class="md:hidden">
+                <button id="menuBtn" class="text-gray-700 hover:text-primary">
+                  <i class="ri-menu-line text-2xl"></i>
+                </button>
+                <div
+                  id="mobileMenu"
+                  class="hidden absolute top-16 left-0 w-full bg-white shadow-lg py-4"
+                >
+                  <div class="flex flex-col space-y-4 px-4">
+                    <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+                    <div class="space-y-2">
+                      <button
+                        onclick="toggleSubmenu('servicesSubmenu')"
+                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                      >
+                        Services
+                        <i class="ri-arrow-down-s-line"></i>
+                      </button>
+                      <div id="servicesSubmenu" class="hidden pl-4 space-y-2">
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Wildlife Removal</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Prevention</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Damage Repair</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Consultation</a
+                        >
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <button
+                        onclick="toggleSubmenu('aboutSubmenu')"
+                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                      >
+                        About
+                        <i class="ri-arrow-down-s-line"></i>
+                      </button>
+                      <div id="aboutSubmenu" class="hidden pl-4 space-y-2">
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Our Story</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Team</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Testimonials</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Careers</a
+                        >
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <button
+                        onclick="toggleSubmenu('contactSubmenu')"
+                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                      >
+                        Contact
+                        <i class="ri-arrow-down-s-line"></i>
+                      </button>
+                      <div id="contactSubmenu" class="hidden pl-4 space-y-2">
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Get Quote</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Emergency Service</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >Support</a
+                        >
+                        <a href="#" class="block text-gray-700 hover:text-primary"
+                          >FAQ</a
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-primary"
+                      >Location</a
+                    >
+                    <a href="#" class="text-gray-700 hover:text-primary">Blog</a>
+                    <a
+                      href="tel:1-888-WILDLIFE"
+                      class="text-primary font-semibold"
+                      >1-888-WILDLIFE</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <a
+                  href="tel:1-888-WILDLIFE"
+                  class="hidden md:block text-primary font-semibold"
+                  >1-888-WILDLIFE</a
+                >
+                <button
+                  class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90"
+                >
+                  Get Help Now
+                </button>
+              </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 py-4 border-t relative">
+              <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+              <div class="relative group">
+                <button
+                  class="text-gray-700 hover:text-primary flex items-center"
+                >
+                  Services
+                  <i class="ri-arrow-down-s-line ml-1"></i>
+                </button>
+                <div
+                  class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block"
+                >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Wildlife Removal</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Prevention</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Damage Repair</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Consultation</a
+                  >
+                </div>
+              </div>
+              <div class="relative group">
+                <button
+                  class="text-gray-700 hover:text-primary flex items-center"
+                >
+                  About
+                  <i class="ri-arrow-down-s-line ml-1"></i>
+                </button>
+                <div
+                  class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block"
+                >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Our Story</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Team</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Testimonials</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Careers</a
+                  >
+                </div>
+              </div>
+              <div class="relative group">
+                <button
+                  class="text-gray-700 hover:text-primary flex items-center"
+                >
+                  Contact
+                  <i class="ri-arrow-down-s-line ml-1"></i>
+                </button>
+                <div
+                  class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block"
+                >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Get Quote</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Emergency Service</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >Support</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    >FAQ</a
+                  >
+                </div>
+              </div>
+              <a href="#" class="text-gray-700 hover:text-primary">Location</a>
+              <a href="#" class="text-gray-700 hover:text-primary">Blog</a>
+            </nav>
+          </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 class="text-xl font-['Pacifico'] mb-4">WildCare</h3>
+              <p class="text-gray-400">
+                Professional wildlife control services that care for both nature
+                and your property.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Services</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Services</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Wildlife Removal</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Prevention</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Damage Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Consultation</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+              <ul class="space-y-2">
+                <li class="flex items-center space-x-2">
+                  <i class="ri-phone-line"></i>
+                  <span class="text-gray-400">1-888-WILDLIFE</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="ri-mail-line"></i>
+                  <span class="text-gray-400">info@wildcare.com</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="ri-map-pin-line"></i>
+                  <span class="text-gray-400"
+                    >123 Nature Street, Wildlife City</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 mt-8 pt-8">
+            <div class="text-center mb-6">
+              <h4 class="text-lg font-semibold mb-4">FOLLOW US</h4>
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-twitter-fill text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-facebook-fill text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-youtube-fill text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-instagram-fill text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-linkedin-fill text-2xl"></i>
+                </a>
+              </div>
+            </div>
+            <div class="text-center text-gray-400">
+              <p>&copy; 2025 WildCare. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+      
+
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+      document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+      function toggleSubmenu(id) {
+        const submenu = document.getElementById(id);
+        const allSubmenus = document.querySelectorAll('[id$="Submenu"]');
+        allSubmenus.forEach((menu) => {
+          if (menu.id !== id) {
+            menu.classList.add("hidden");
+          }
+        });
+        submenu.classList.toggle("hidden");
+      }
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+        console.log("Form submitted:", data);
+        const notification = document.createElement("div");
+        notification.className =
+          "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-300 translate-y-0";
+        notification.textContent = "Message sent successfully!";
+        document.body.appendChild(notification);
+        setTimeout(() => {
+          notification.style.transform = "translateY(150%)";
+          setTimeout(() => notification.remove(), 300);
+        }, 3000);
+        e.target.reset();
+      });
+
+
+
+      // Tailwind
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4CAF50",
+              secondary: "#8BC34A",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+
+    
+</body>
+</html>

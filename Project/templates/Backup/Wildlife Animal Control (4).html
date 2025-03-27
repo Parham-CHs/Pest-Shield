@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wildlife Control Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4CAF50",
+              secondary: "#8BC34A",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white">
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col">
+          <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+              <a href="#" class="text-2xl font-['Pacifico'] text-primary"
+                >WildCare</a
+              >
+            </div>
+            <div class="md:hidden">
+              <button id="menuBtn" class="text-gray-700 hover:text-primary">
+                <i class="ri-menu-line text-2xl"></i>
+              </button>
+              <div
+                id="mobileMenu"
+                class="hidden absolute top-16 left-0 w-full bg-white shadow-lg py-4"
+              >
+                <div class="flex flex-col space-y-4 px-4">
+                  <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+                  <div class="space-y-2">
+                    <button
+                      onclick="toggleSubmenu('servicesSubmenu')"
+                      class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                    >
+                      Services
+                      <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div id="servicesSubmenu" class="hidden pl-4 space-y-2">
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Wildlife Removal</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Prevention</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Damage Repair</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Consultation</a
+                      >
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <button
+                      onclick="toggleSubmenu('aboutSubmenu')"
+                      class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                    >
+                      About
+                      <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div id="aboutSubmenu" class="hidden pl-4 space-y-2">
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Our Story</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Team</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Testimonials</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Careers</a
+                      >
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <button
+                      onclick="toggleSubmenu('contactSubmenu')"
+                      class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                    >
+                      Contact
+                      <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div id="contactSubmenu" class="hidden pl-4 space-y-2">
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Get Quote</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Emergency Service</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >Support</a
+                      >
+                      <a href="#" class="block text-gray-700 hover:text-primary"
+                        >FAQ</a
+                      >
+                    </div>
+                  </div>
+                  <a href="#" class="text-gray-700 hover:text-primary"
+                    >Location</a
+                  >
+                  <a href="#" class="text-gray-700 hover:text-primary">Blog</a>
+                  <a
+                    href="tel:1-888-WILDLIFE"
+                    class="text-primary font-semibold"
+                    >1-888-WILDLIFE</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <a
+                href="tel:1-888-WILDLIFE"
+                class="hidden md:block text-primary font-semibold"
+                >1-888-WILDLIFE</a
+              >
+              <button
+                class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90"
+              >
+                Get Help Now
+              </button>
+            </div>
+          </div>
+          <nav class="hidden md:flex space-x-8 py-4 border-t relative">
+            <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+            <div class="relative group">
+              <button
+                class="text-gray-700 hover:text-primary flex items-center"
+              >
+                Services
+                <i class="ri-arrow-down-s-line ml-1"></i>
+              </button>
+              <div
+                class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Wildlife Removal</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Prevention</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Damage Repair</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Consultation</a
+                >
+              </div>
+            </div>
+            <div class="relative group">
+              <button
+                class="text-gray-700 hover:text-primary flex items-center"
+              >
+                About
+                <i class="ri-arrow-down-s-line ml-1"></i>
+              </button>
+              <div
+                class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Our Story</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Team</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Testimonials</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Careers</a
+                >
+              </div>
+            </div>
+            <div class="relative group">
+              <button
+                class="text-gray-700 hover:text-primary flex items-center"
+              >
+                Contact
+                <i class="ri-arrow-down-s-line ml-1"></i>
+              </button>
+              <div
+                class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Get Quote</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Emergency Service</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >Support</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary"
+                  >FAQ</a
+                >
+              </div>
+            </div>
+            <a href="#" class="text-gray-700 hover:text-primary">Location</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Blog</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        class="relative h-[600px] flex items-center"
+        style="background: url('https://public.readdy.ai/ai/img_res/5a165f4f30e922afba2c0fe843ca0a60.jpg') center/cover"
+      >
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <h1 class="text-5xl font-bold text-white mb-6">
+              Humane Wildlife Management Solutions
+            </h1>
+            <p class="text-xl text-white/90 mb-8">
+              Professional, eco-friendly wildlife control services that respect
+              both nature and your property. Available 24/7 for emergency
+              situations.
+            </p>
+            <div class="flex space-x-4">
+              <button
+                class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90"
+              >
+                Get Started
+              </button>
+              <button
+                class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-white/90"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Our Wildlife Services
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              We offer comprehensive solutions for all your wildlife control
+              needs, ensuring both the safety of your property and the humane
+              treatment of animals.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="ri-shield-check-line text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                Prevention & Protection
+              </h3>
+              <p class="text-gray-600">
+                We identify and seal potential entry points to prevent wildlife
+                from entering your property.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="ri-home-heart-line text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Humane Removal</h3>
+              <p class="text-gray-600">
+                Safe and ethical removal of wildlife using the most humane
+                methods available.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="ri-tools-line text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Damage Repair</h3>
+              <p class="text-gray-600">
+                Professional repair of any damage caused by wildlife to restore
+                your property.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Why Choose Our Wildlife Services?
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="ri-check-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-2">
+                      24/7 Emergency Response
+                    </h3>
+                    <p class="text-gray-600">
+                      Available around the clock for urgent wildlife situations.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="ri-check-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-2">
+                      Eco-Friendly Methods
+                    </h3>
+                    <p class="text-gray-600">
+                      We use environmentally conscious approaches that protect
+                      both wildlife and your property.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="ri-check-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-2">
+                      Licensed Professionals
+                    </h3>
+                    <p class="text-gray-600">
+                      Our team consists of certified wildlife control experts
+                      with years of experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img
+                src="https://public.readdy.ai/ai/img_res/a4faedd5b077619823d55c37aed3ebd6.jpg"
+                alt="Wildlife Control Expert"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Common Wildlife Problems We Solve
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              We handle a wide range of wildlife issues with expertise and care.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-bug-line text-xl text-primary"></i>
+              </div>
+              <h3 class="font-semibold">Raccoons</h3>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-mouse-line text-xl text-primary"></i>
+              </div>
+              <h3 class="font-semibold">Squirrels</h3>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-bird-line text-xl text-primary"></i>
+              </div>
+              <h3 class="font-semibold">Birds</h3>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-bug-2-line text-xl text-primary"></i>
+              </div>
+              <h3 class="font-semibold">Bats</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Why Choose Our Wildlife Services?
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="ri-check-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-2">
+                      24/7 Emergency Response
+                    </h3>
+                    <p class="text-gray-600">
+                      Available around the clock for urgent wildlife situations.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="ri-check-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-2">
+                      Eco-Friendly Methods
+                    </h3>
+                    <p class="text-gray-600">
+                      We use environmentally conscious approaches that protect
+                      both wildlife and your property.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="ri-check-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-2">
+                      Licensed Professionals
+                    </h3>
+                    <p class="text-gray-600">
+                      Our team consists of certified wildlife control experts
+                      with years of experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img
+                src="https://public.readdy.ai/ai/img_res/a4faedd5b077619823d55c37aed3ebd6.jpg"
+                alt="Wildlife Control Expert"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              See Us in Action
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+              Watch how our expert team handles wildlife situations with care
+              and professionalism.
+            </p>
+          </div>
+          <div class="max-w-3xl mx-auto">
+            <div class="aspect-w-16 aspect-h-9 mb-8">
+              <div
+                class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg"
+              >
+                <iframe
+                  class="absolute inset-0 w-full h-full rounded-lg"
+                  src="https://www.youtube.com/watch?v=9qPMU-EeSg0"
+                  title="Wildlife Control Services"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+              <div>
+                <h3 class="text-xl font-semibold mb-3">Our Approach</h3>
+                <p class="text-gray-600">
+                  In this video, you'll see our team demonstrating our humane
+                  wildlife control methods. We prioritize the safety and
+                  well-being of both the animals and your property, using
+                  advanced techniques and equipment to ensure effective results.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-3">Expert Solutions</h3>
+                <p class="text-gray-600">
+                  Every situation is unique, which is why our experienced
+                  professionals assess each case individually. We develop
+                  customized solutions that address your specific wildlife
+                  concerns while maintaining ecological balance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Get Professional Help Today
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Don't let wildlife problems escalate. Contact our experts for a
+              free consultation.
+            </p>
+          </div>
+          <div class="max-w-xl mx-auto">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white py-3 !rounded-button hover:bg-primary/90"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-['Pacifico'] mb-4">WildCare</h3>
+            <p class="text-gray-400">
+              Professional wildlife control services that care for both nature
+              and your property.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Services</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Wildlife Removal</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Prevention</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Damage Repair</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Consultation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <i class="ri-phone-line"></i>
+                <span class="text-gray-400">1-888-WILDLIFE</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="ri-mail-line"></i>
+                <span class="text-gray-400">info@wildcare.com</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="ri-map-pin-line"></i>
+                <span class="text-gray-400"
+                  >123 Nature Street, Wildlife City</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 WildCare. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+      document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+      function toggleSubmenu(id) {
+        const submenu = document.getElementById(id);
+        const allSubmenus = document.querySelectorAll('[id$="Submenu"]');
+        allSubmenus.forEach((menu) => {
+          if (menu.id !== id) {
+            menu.classList.add("hidden");
+          }
+        });
+        submenu.classList.toggle("hidden");
+      }
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+        console.log("Form submitted:", data);
+        const notification = document.createElement("div");
+        notification.className =
+          "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-300 translate-y-0";
+        notification.textContent = "Message sent successfully!";
+        document.body.appendChild(notification);
+        setTimeout(() => {
+          notification.style.transform = "translateY(150%)";
+          setTimeout(() => notification.remove(), 300);
+        }, 3000);
+        e.target.reset();
+      });
+    </script>
+  </body>
+</html>
