@@ -39,34 +39,34 @@
 
               <!-- hidden mobile menu -->
               <div class="md:hidden">
-                <button id="menuBtn" class="text-gray-700 hover:text-primary">
+                <button id="menuBtn" class="text-gray-700 hover:text-primary transition-colors duration-200">
                   <i class="ri-menu-line text-2xl"></i>
                 </button>
                 <div
                   id="mobileMenu"
-                  class="hidden absolute top-16 left-0 w-full bg-white shadow-lg py-4"
+                  class="opacity-0 translate-y-2 absolute top-16 left-0 w-full bg-white shadow-lg py-4 pointer-events-none transition-all duration-300 ease-in-out"
                 >
                   <div class="flex flex-col space-y-4 px-4">
-                    <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors duration-200">Home</a>
                     <div class="space-y-2">
                       <button
                         onclick="toggleSubmenu('servicesSubmenu')"
-                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-200"
                       >
                         Servicesxxxxxx
-                        <i class="ri-arrow-down-s-line"></i>
+                        <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
                       </button>
-                      <div id="servicesSubmenu" class="hidden pl-4 space-y-2">
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                      <div id="servicesSubmenu" class="max-h-0 overflow-hidden pl-4 space-y-2 transition-all duration-300 ease-in-out">
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Wildlife Removal</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Prevention</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Damage Repair</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Consultation</a
                         >
                       </div>
@@ -74,22 +74,22 @@
                     <div class="space-y-2">
                       <button
                         onclick="toggleSubmenu('aboutSubmenu')"
-                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-200"
                       >
                         About
-                        <i class="ri-arrow-down-s-line"></i>
+                        <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
                       </button>
-                      <div id="aboutSubmenu" class="hidden pl-4 space-y-2">
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                      <div id="aboutSubmenu" class="max-h-0 overflow-hidden pl-4 space-y-2 transition-all duration-300 ease-in-out">
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Our Story</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Team</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Testimonials</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Careers</a
                         >
                       </div>
@@ -97,33 +97,33 @@
                     <div class="space-y-2">
                       <button
                         onclick="toggleSubmenu('contactSubmenu')"
-                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-200"
                       >
                         Contact
-                        <i class="ri-arrow-down-s-line"></i>
+                        <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
                       </button>
-                      <div id="contactSubmenu" class="hidden pl-4 space-y-2">
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                      <div id="contactSubmenu" class="max-h-0 overflow-hidden pl-4 space-y-2 transition-all duration-300 ease-in-out">
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Get Quote</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Emergency Service</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >Support</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary"
+                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-200"
                           >FAQ</a
                         >
                       </div>
                     </div>
-                    <a href="#" class="text-gray-700 hover:text-primary"
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors duration-200"
                       >Location</a
                     >
-                    <a href="#" class="text-gray-700 hover:text-primary">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors duration-200">Blog</a>
                     <a
                       href="tel:1-888-WILDLIFE"
-                      class="text-primary font-semibold"
+                      class="text-primary font-semibold transition-colors duration-200"
                       >1-888-WILDLIFE</a
                     >
                   </div>
@@ -323,26 +323,65 @@
       
 
     <script>
+      // Mobile menu toggle with transitions
       const menuBtn = document.getElementById("menuBtn");
       const mobileMenu = document.getElementById("mobileMenu");
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+
+      menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent immediate closing when clicking the button
+        
+        // Toggle mobile menu
+        mobileMenu.classList.toggle("opacity-0");
+        mobileMenu.classList.toggle("translate-y-2");
+        mobileMenu.classList.toggle("pointer-events-none");
+        mobileMenu.classList.toggle("opacity-100");
+        mobileMenu.classList.toggle("translate-y-0");
       });
+
+      // Close menu when clicking outside
       document.addEventListener("click", (e) => {
         if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.add("opacity-0");
+          mobileMenu.classList.add("translate-y-2");
+          mobileMenu.classList.add("pointer-events-none");
+          mobileMenu.classList.remove("opacity-100");
+          mobileMenu.classList.remove("translate-y-0");
+          
+          // Also close all submenus
+          document.querySelectorAll('[id$="Submenu"]').forEach(submenu => {
+            submenu.classList.add("max-h-0");
+            submenu.classList.remove("max-h-96");
+            // Reset arrow icons
+            const arrow = submenu.previousElementSibling?.querySelector('i');
+            if (arrow) arrow.classList.remove("rotate-180");
+          });
         }
       });
+
+      // Submenu toggle function with transitions
       function toggleSubmenu(id) {
         const submenu = document.getElementById(id);
-        const allSubmenus = document.querySelectorAll('[id$="Submenu"]');
-        allSubmenus.forEach((menu) => {
+        const arrow = event.currentTarget.querySelector('i');
+        
+        // Close all other submenus first
+        document.querySelectorAll('[id$="Submenu"]').forEach(menu => {
           if (menu.id !== id) {
-            menu.classList.add("hidden");
+            menu.classList.add("max-h-0");
+            menu.classList.remove("max-h-96");
+            // Reset other arrows
+            const otherArrow = menu.previousElementSibling?.querySelector('i');
+            if (otherArrow) otherArrow.classList.remove("rotate-180");
           }
         });
-        submenu.classList.toggle("hidden");
+        
+        // Toggle current submenu
+        submenu.classList.toggle("max-h-0");
+        submenu.classList.toggle("max-h-96");
+        arrow.classList.toggle("rotate-180");
       }
+
+
+      // Form submission
       document.querySelector("form").addEventListener("submit", (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
