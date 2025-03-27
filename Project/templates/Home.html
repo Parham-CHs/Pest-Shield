@@ -6,8 +6,9 @@
       <!-- 1- image and title Humane Wildlife Management Solutions -->
       <section
         class="relative h-[600px] flex items-center"
-        style="background: url('../static/img/bg-jng.jpg') center/cover"
-      >
+        style="background: url('../static/img/bg-jng.jpg') center/cover" 
+        >        <!-- style="background: url('{{ url_for('static', filename='img/bg-jng.jpg') }}') center/cover" -->
+
         <div class="absolute inset-0 bg-black/30"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="max-w-3xl">
@@ -74,7 +75,7 @@
                 class="rounded-full overflow-hidden mb-6 relative w-48 h-48 mx-auto"
               >
                 <img
-                  src="{{ url_for('static', filename='img/LIFETIME-GUARANTEE.jpg }}"
+                  src="{{ url_for('static', filename='img/LIFETIME-GUARANTEE.jpg') }}"
                   alt="Lifetime Guarantee"
                   class="w-full h-full object-cover"
                 />
@@ -102,7 +103,7 @@
                 class="rounded-full overflow-hidden mb-6 relative w-48 h-48 mx-auto"
               >
                 <img
-                  src="{{ url_for('static', filename='img/FREQUENTLY-ASKED-QUESTIONS.jpg' }}"
+                  src="{{ url_for('static', filename='img/FREQUENTLY-ASKED-QUESTIONS.jpg') }}"
                   alt="FAQ"
                   class="w-full h-full object-cover"
                 />
@@ -245,7 +246,7 @@
             </div>
             <div>
               <img
-                src="{{ url_for('static', filename='img/Why-Choose-Our-Wildlife-Services.jpg }}"
+                src="{{ url_for('static', filename='img/Why-Choose-Our-Wildlife-Services.jpg') }}"
                 alt="Wildlife Control Expert"
                 class="rounded-lg shadow-lg"
               />
