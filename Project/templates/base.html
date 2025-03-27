@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}Wildlife Control Services{% endblock %}</title>
+    <title>{% block title %}Pest Shield{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,11 +29,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col">
             <div class="flex justify-between items-center h-16">
+              
+              <!-- Pest Shield -->
               <div class="flex items-center">
                 <a href="#" class="text-2xl font-['Pacifico'] text-primary"
                   >Pest Shield</a
                 >
               </div>
+
+              <!-- hidden mobile menu -->
               <div class="md:hidden">
                 <button id="menuBtn" class="text-gray-700 hover:text-primary">
                   <i class="ri-menu-line text-2xl"></i>
@@ -125,6 +129,8 @@
                   </div>
                 </div>
               </div>
+
+              <!-- tel , get help -->
               <div class="flex items-center space-x-4">
                 <a
                   href="tel:1-888-WILDLIFE"
@@ -138,8 +144,9 @@
                 </button>
               </div>
             </div>
-            <!--  -->
             
+
+            <!-- navbar when wide screen -->
             <nav class="hidden md:flex space-x-8 py-4 border-t relative">
               <a href="#" class="text-gray-700 hover:text-primary">Home</a>
             
@@ -190,8 +197,6 @@
             </nav>
             
 
-
-            <!--  -->
           </div>
         </div>
     </header>
@@ -199,7 +204,10 @@
 
     <!-- Main Content -->
     <main>
-        {% block content %}{% endblock %}
+        {% block content %}
+        
+        
+        {% endblock %}
     </main>
 
     <!-- footer -->
@@ -213,6 +221,8 @@
                 and your property.
               </p>
             </div>
+
+            <!-- Quick Links -->
             <div>
               <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
               <ul class="space-y-2">
@@ -230,6 +240,8 @@
                 </li>
               </ul>
             </div>
+
+            <!-- Services -->
             <div>
               <h4 class="text-lg font-semibold mb-4">Services</h4>
               <ul class="space-y-2">
@@ -255,6 +267,8 @@
                 </li>
               </ul>
             </div>
+
+            <!-- Contact Us -->
             <div>
               <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
               <ul class="space-y-2">
@@ -275,6 +289,8 @@
               </ul>
             </div>
           </div>
+
+          <!-- follow us -->
           <div class="border-t border-gray-800 mt-8 pt-8">
             <div class="text-center mb-6">
               <h4 class="text-lg font-semibold mb-4">FOLLOW US</h4>
@@ -300,10 +316,11 @@
               <p>&copy; 2025 PestShield. All rights reserved.</p>
             </div>
           </div>
+
+
         </div>
     </footer>
       
-
 
     <script>
       const menuBtn = document.getElementById("menuBtn");
@@ -342,7 +359,6 @@
         }, 3000);
         e.target.reset();
       });
-
 
 
       // Tailwind
