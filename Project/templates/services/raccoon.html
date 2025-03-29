@@ -1,0 +1,197 @@
+{% extends "services/services.html" %}
+
+
+{% block title %}Pest Shield Services{% endblock %}
+
+
+{% block services_content %}
+        <style>
+            :where([class^="ri-"])::before { content: "\f3c2"; }
+            .service-icon {
+                width: 120px;
+                height: 120px;
+                background: #4caf50;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .service-icon i {
+                font-size: 48px;
+                color: white;
+            }
+        </style>
+
+        <div class="w-full">
+            <div class="relative">
+            <img src="{{ url_for('static', filename='img/animals/' + animal + '-Banner-1.webp') }}" class="w-full h-auto">
+                <div class="absolute bottom-0 left-0 right-0 bg-gray-700/80 py-4 px-4">
+                    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-0">Need help today? Don't wait</h3>
+                        <a href="#" class="bg-primary hover:bg-[#7CB342] text-white px-6 py-3 !rounded-button font-semibold whitespace-nowrap flex items-center">
+                            <span class="mr-2">FIND A LOCATION</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-12 max-w-5xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    See Us in Action
+                    </h2>
+                    <p class="text-gray-600 mb-8">
+                    When wildlife makes its way into your home it can create unwanted stress for you and your family. When this unfortunate circumstance arises, most homeowners are left with many tough questions. How did they get into my house? How do I keep them out? What kind of damage have they done?
+            
+                    No need to worry, Skedaddle Humane Wildlife Control has you covered. Since 1989, we’ve been employing industry-leading removal and exclusion techniques. Our friendly and knowledgeable staff take the time to understand your unique situation and implement a customized solution that guarantees superior results.
+                    
+                    We don’t just drop off a trap and cross our fingers and we never use harmful poisons or chemicals. When it comes to controlling critters our technicians roll up their sleeves to make sure the job is done right. That means climbing roofs, crawling in attics and using hands-on techniques that keep animals out for good.
+                    
+                    Our proven three-step process ensures that your home and family are protected as part of the Skedaddle Humane Wildlife Control service experience.
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+
+                    <div class="aspect-w-16 aspect-h-9 mb-8">
+                        <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg">
+                            <iframe
+                            class="absolute inset-0 w-full h-full rounded-lg"
+                            src="https://www.youtube.com/embed/9qPMU-EeSg0"
+                            title="Wildlife Control Services"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-8">
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">Our Approach</h3>
+                            <p class="text-gray-600">
+                            In this video, you'll see our team demonstrating our humane
+                            wildlife control methods. We prioritize the safety and
+                            well-being of both the animals and your property, using
+                            advanced techniques and equipment to ensure effective results.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">Expert Solutions</h3>
+                            <p class="text-gray-600">
+                            Every situation is unique, which is why our experienced
+                            professionals assess each case individually. We develop
+                            customized solutions that address your specific wildlife
+                            concerns while maintaining ecological balance.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mb-12 max-w-5xl mx-auto text-left">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    See Us in Action
+                    </h2>
+                    <p class="text-gray-600 mb-8">
+                    When wildlife makes its way into your home it can create unwanted stress for you and your family. When this unfortunate circumstance arises, most homeowners are left with many tough questions. How did they get into my house? How do I keep them out? What kind of damage have they done?
+            
+                    No need to worry, Skedaddle Humane Wildlife Control has you covered. Since 1989, we’ve been employing industry-leading removal and exclusion techniques. Our friendly and knowledgeable staff take the time to understand your unique situation and implement a customized solution that guarantees superior results.
+                    
+                    We don’t just drop off a trap and cross our fingers and we never use harmful poisons or chemicals. When it comes to controlling critters our technicians roll up their sleeves to make sure the job is done right. That means climbing roofs, crawling in attics and using hands-on techniques that keep animals out for good.
+                    
+                    Our proven three-step process ensures that your home and family are protected as part of the Skedaddle Humane Wildlife Control service experience.
+                    </p>
+                </div>
+
+                <!-- With loading state and transition -->
+                <div class="max-w-5xl mx-auto">
+                    <div class="aspect-w-16 aspect-h-9 mb-8">
+                    <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg overflow-hidden group">
+                        <img 
+                        class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-90" 
+                        src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" 
+                        alt="Wildlife Control Services"
+                        loading="lazy"
+                        onload="this.style.opacity=1"
+                        >
+                        <div class="absolute inset-0 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-gray-400 animate-pulse" ...></svg>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="space-y-24">
+                    <div class="flex items-center gap-12">
+                        <div class="service-icon">
+                            <i class="ri-search-line"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-primary mb-4">Analysis and Service</h3>
+                            <p class="text-gray-700 mb-6">Our thorough inspection process helps identify entry points and assess the situation. We develop a customized plan based on our findings to effectively address your wildlife concerns.</p>
+                            <button class="text-primary hover:text-opacity-80 font-semibold flex items-center gap-2">
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-12">
+                        <div class="service-icon">
+                            <i class="ri-home-gear-line"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-primary mb-4">Clean and Clear</h3>
+                            <p class="text-gray-700 mb-6">We safely remove wildlife and thoroughly clean affected areas. Our sanitization process eliminates harmful bacteria and odors, restoring your space to a healthy condition.</p>
+                            <button class="text-primary hover:text-opacity-80 font-semibold flex items-center gap-2">
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-12">
+                        <div class="service-icon">
+                            <i class="ri-shield-check-line"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-primary mb-4">Prevent and Protect</h3>
+                            <p class="text-gray-700 mb-6">We implement effective prevention measures to keep wildlife out long-term. Our expert team seals entry points and installs protective barriers to prevent future invasions.</p>
+                            <button class="text-primary hover:text-opacity-80 font-semibold flex items-center gap-2">
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-2">CALL US TODAY</h2>
+                        <a href="tel:1.888.592.0387" class="text-4xl text-primary font-bold block mb-4">1.888.592.0387</a>
+                        <p class="text-xl mb-4">OR</p>
+                        <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">Request for Services</button>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" alt="Service Vehicles" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
