@@ -103,56 +103,96 @@
 
             <section class="py-16 bg-gray-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                    See Us in Action
-                    </h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+    
+                    <div class="text-center mb-12 max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        See Us in Action
+                        </h2>
+                        <p class="text-gray-600 mb-8">
                         When wildlife makes its way into your home it can create unwanted stress for you and your family. When this unfortunate circumstance arises, most homeowners are left with many tough questions. How did they get into my house? How do I keep them out? What kind of damage have they done?
-
+                
                         No need to worry, Skedaddle Humane Wildlife Control has you covered. Since 1989, we’ve been employing industry-leading removal and exclusion techniques. Our friendly and knowledgeable staff take the time to understand your unique situation and implement a customized solution that guarantees superior results.
                         
                         We don’t just drop off a trap and cross our fingers and we never use harmful poisons or chemicals. When it comes to controlling critters our technicians roll up their sleeves to make sure the job is done right. That means climbing roofs, crawling in attics and using hands-on techniques that keep animals out for good.
                         
                         Our proven three-step process ensures that your home and family are protected as part of the Skedaddle Humane Wildlife Control service experience.
-                    </p>
-                </div>
-                <div class="max-w-5xl mx-auto">
-                    <div class="aspect-w-16 aspect-h-9 mb-8">
-                    <div
-                        class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg"
-                    >
-                        <iframe
-                        class="absolute inset-0 w-full h-full rounded-lg"
-                        src="https://www.youtube.com/embed/9qPMU-EeSg0"
-                        title="Wildlife Control Services"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3">Our Approach</h3>
-                        <p class="text-gray-600">
-                        In this video, you'll see our team demonstrating our humane
-                        wildlife control methods. We prioritize the safety and
-                        well-being of both the animals and your property, using
-                        advanced techniques and equipment to ensure effective results.
                         </p>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3">Expert Solutions</h3>
-                        <p class="text-gray-600">
-                        Every situation is unique, which is why our experienced
-                        professionals assess each case individually. We develop
-                        customized solutions that address your specific wildlife
-                        concerns while maintaining ecological balance.
+    
+                    <div class="max-w-5xl mx-auto">
+    
+                        <div class="aspect-w-16 aspect-h-9 mb-8">
+                            <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg">
+                                <iframe
+                                class="absolute inset-0 w-full h-full rounded-lg"
+                                src="https://www.youtube.com/embed/9qPMU-EeSg0"
+                                title="Wildlife Control Services"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                ></iframe>
+                            </div>
+                        </div>
+    
+    
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-8">
+    
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3">Our Approach</h3>
+                                <p class="text-gray-600">
+                                In this video, you'll see our team demonstrating our humane
+                                wildlife control methods. We prioritize the safety and
+                                well-being of both the animals and your property, using
+                                advanced techniques and equipment to ensure effective results.
+                                </p>
+                            </div>
+    
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3">Expert Solutions</h3>
+                                <p class="text-gray-600">
+                                Every situation is unique, which is why our experienced
+                                professionals assess each case individually. We develop
+                                customized solutions that address your specific wildlife
+                                concerns while maintaining ecological balance.
+                                </p>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="mb-12 max-w-5xl mx-auto text-left">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        See Us in Action
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                        When wildlife makes its way into your home it can create unwanted stress for you and your family. When this unfortunate circumstance arises, most homeowners are left with many tough questions. How did they get into my house? How do I keep them out? What kind of damage have they done?
+                
+                        No need to worry, Skedaddle Humane Wildlife Control has you covered. Since 1989, we’ve been employing industry-leading removal and exclusion techniques. Our friendly and knowledgeable staff take the time to understand your unique situation and implement a customized solution that guarantees superior results.
+                        
+                        We don’t just drop off a trap and cross our fingers and we never use harmful poisons or chemicals. When it comes to controlling critters our technicians roll up their sleeves to make sure the job is done right. That means climbing roofs, crawling in attics and using hands-on techniques that keep animals out for good.
+                        
+                        Our proven three-step process ensures that your home and family are protected as part of the Skedaddle Humane Wildlife Control service experience.
                         </p>
                     </div>
+    
+                    <!-- With loading state and transition -->
+                    <div class="max-w-5xl mx-auto">
+                        <div class="aspect-w-16 aspect-h-9 mb-8">
+                        <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg overflow-hidden group">
+                            <img 
+                            class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-90" 
+                            src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" 
+                            alt="Wildlife Control Services"
+                            loading="lazy"
+                            onload="this.style.opacity=1"
+                            >
+                            <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-gray-400 animate-pulse" ...></svg>
+                            </div>
+                        </div>
+                        </div>
                     </div>
-                </div>
+    
                 </div>
             </section>
 
