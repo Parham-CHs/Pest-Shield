@@ -19,6 +19,33 @@
       :where([class^="ri-"])::before { content: "\f3c2"; }
     </style>
 
+
+    <script>
+      // Tailwind
+      tailwind.config = {
+          theme: {
+          extend: {
+              colors: {
+              primary: "#4CAF50",
+              secondary: "#8BC34A",
+              },
+              borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+              },
+          },
+          },
+      };
+    </script>
+
   </head>
 
 
@@ -49,17 +76,20 @@
                   <div class="flex flex-col space-y-4 px-4">
 
                     <!-- home -->
-                    <a href="#" class="text-gray-700 hover:text-primary transition-colors duration-500">Home</a>
+                    <a href="{{ url_for('home') }}" class="text-gray-700 hover:text-primary transition-colors duration-500">Home</a>
+
 
                     <!-- services -->
                     <div class="space-y-2">
                       <button
                         onclick="toggleSubmenu('servicesSubmenu')"
                         class="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-500"
+                        
                       >
                         Services
                         <i class="ri-arrow-down-s-line transition-transform duration-500"></i>
                       </button>
+                      
                       <div id="servicesSubmenu" class="max-h-0 overflow-hidden pl-4 space-y-2 transition-all duration-500 ease-in-out">
                         <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
                           >Wildlife Removal</a
@@ -163,28 +193,31 @@
 
             <!-- navbar when wide screen -->
             <nav class="hidden md:flex space-x-8 py-4 border-t relative">
-              <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+              <a href="{{ url_for('home') }}" class="text-gray-700 hover:text-primary">Home</a>
             
+
               <!-- Services Dropdown -->
               <div class="relative group">
-                <button class="text-gray-700 hover:text-primary flex items-center">
+                <a href="{{ url_for('services_main') }}" class="text-gray-700 hover:text-primary flex items-center">
                   Services
                   <i class="ri-arrow-down-s-line ml-1"></i>
-                </button>
+                </a>
                 <div class="absolute top-full left-0 pt-2 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
+                  <a href="{{ url_for('services_page' , animal='raccoon') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Raccoon</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Wildlife Removal</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Prevention</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Damage Repair</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Consultation</a>
                 </div>
               </div>
+
             
               <!-- About Dropdown -->
               <div class="relative group">
-                <button class="text-gray-700 hover:text-primary flex items-center">
-                  About
+                <a href="{{ url_for('about') }}" class="text-gray-700 hover:text-primary flex items-center">
+                  about
                   <i class="ri-arrow-down-s-line ml-1"></i>
-                </button>
+                </a>
                 <div class="absolute top-full left-0 pt-2 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Our Story</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Team</a>
@@ -195,10 +228,10 @@
             
               <!-- Contact Dropdown -->
               <div class="relative group">
-                <button class="text-gray-700 hover:text-primary flex items-center">
+                <a href="{{ url_for('contact') }}" class="text-gray-700 hover:text-primary flex items-center">
                   Contact
                   <i class="ri-arrow-down-s-line ml-1"></i>
-                </button>
+                </a>
                 <div class="absolute top-full left-0 pt-2 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Get Quote</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Emergency Service</a>
@@ -207,18 +240,22 @@
                 </div>
               </div>
             
-              <a href="#" class="text-gray-700 hover:text-primary">Location</a>
-              <a href="#" class="text-gray-700 hover:text-primary">Blog</a>
+              <a href="{{ url_for('location') }}" class="text-gray-700 hover:text-primary">Location</a>
+              <a href="{{ url_for('blog') }}" class="text-gray-700 hover:text-primary">Blog</a>
             </nav>
             
 
           </div>
         </div>
+
     </header>
 
 
+      
     <!-- Main Content -->
-    <main>
+    <main class="pt-[64px] md:pt-[120px]">
+
+        <!-- space under header  -->
         {% block content %}
         
         
