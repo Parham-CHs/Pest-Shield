@@ -5,22 +5,6 @@
 
 
 {% block services_content %}
-        <style>
-            :where([class^="ri-"])::before { content: "\f3c2"; }
-            .service-icon {
-                width: 120px;
-                height: 120px;
-                background: #4caf50;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .service-icon i {
-                font-size: 48px;
-                color: white;
-            }
-        </style>
 
         <div class="w-full">
             <div class="relative">
@@ -178,20 +162,5 @@
             </div>
         </section>
 
-        <section class="bg-gray-50 py-16">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center justify-between">
-                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
-                        <h2 class="text-3xl font-bold mb-2">CALL US TODAY</h2>
-                        <a href="tel:1.888.592.0387" class="text-4xl text-primary font-bold block mb-4">1.888.592.0387</a>
-                        <p class="text-xl mb-4">OR</p>
-                        <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">Request for Services</button>
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <img src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" alt="Service Vehicles" class="rounded-lg shadow-lg">
-                    </div>
-                </div>
-            </div>
-        </section>
 
 {% endblock %}
