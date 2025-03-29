@@ -14,7 +14,7 @@ app.secret_key = secrets.token_hex(16)
 @app.route('/home')
 @app.route('/index')
 def home():
-    return render_template('Home.html')
+    return render_template('home/Home.html')
 
 @app.route('/services')
 def services_main():
@@ -31,7 +31,7 @@ def services_page(animal):
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about/about.html')
 
 @app.route('/contact')
 def contact():
