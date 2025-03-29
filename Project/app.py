@@ -33,13 +33,17 @@ def services_page(animal):
 def about():
     return render_template('about/about.html')
 
+@app.route('/about2')
+def about2():
+    return render_template('about/about2.html')
+
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact/contact.html')
 
 @app.route('/location')
 def location():
-    return render_template('location.html')
+    return render_template('location/location.html')
 
 @app.route('/blog')
 def blog():
