@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+
+{% block title %}About Pest Shield{% endblock %}
+
+
+
+{% block content %}
+
+
+    {% block animals_list %}
+        <section class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-bug-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Raccoons</h3>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-mouse-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Squirrels</h3>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-bird-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Birds</h3>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-bug-2-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Bats</h3>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-snake-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Snakes</h3>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-bear-smile-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Bears</h3>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-deer-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Deer</h3>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="ri-rabbit-line text-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold">Rabbits</h3>
+                </div>
+            </div>
+        </div>
+        </section>
+    {% endblock %}
+
+
+    {% block services_content %}
+
+            <style>
+                :where([class^="ri-"])::before { content: "\f3c2"; }
+                .service-icon {
+                    width: 120px;
+                    height: 120px;
+                    background: #4caf50;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .service-icon i {
+                    font-size: 48px;
+                    color: white;
+                }
+            </style>
+
+
+
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+                    <div class="text-center mb-12 max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                            About Us
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Skedaddle Humane Wildlife Control was founded in 1989 with the mission of providing homeowners with humane and effective 
+                            solutions to their wildlife conflicts. Since then we’ve helped thousands of clients across North America rid their homes of 
+                            unwanted wildlife visitors using safe and humane methods.
+                            <br>
+                            <br>
+                            With three decades of experience under our belt, our team of skilled technicians is equipped with the knowledge and tools 
+                            necessary to safely and humanely remove wildlife from your property. Whether it’s a mischievous raccoon, a noisy squirrel, or a family of birds seeking shelter, we approach each situation with care and professionalism.
+                        </p>
+                    </div>
+
+
+                    <div class="max-w-5xl mx-auto">
+                        <div class="aspect-w-16 aspect-h-9 mb-8">
+                          <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg overflow-hidden">
+                            <img 
+                              class="absolute inset-0 w-full h-full object-cover rounded-lg" 
+                              src="{{ url_for('static', filename='img/about/Skedaddle-President-Bill-Dowd-1-1024x778-1.jpg') }}" 
+                              alt="Wildlife Control Services"
+                            >
+                          </div>
+                        </div>
+                    </div>
+
+    
+                    <div class="mb-12 max-w-5xl mx-auto text-left">
+                        <p class="text-gray-600 mb-8">
+                            Owning a home comes with all sorts of unexpected challenges and having a family of raccoons in the attic or mice in the kitchen can be both stressful and overwhelming. That’s why we’ve made it our mission to provide prompt, reliable, and courteous service to every client, every time. Our full-service wildlife removal solutions take the stress out of the situation and give you the peace of mind of knowing your property is safe and secured for years to come. From the very beginning, our objective has been to provide client-focused solutions that keep your home and family safe without doing harm to the wild animals we share our communities with.
+                            <br>
+                            <br>
+                            To deliver on our promise to clients we take a hands-on approach to wildlife removal. Our trained staff go where the animals go, climbing up ladders, crawling through attics and squeezing below decks to humanely remove wildlife, clean up the mess they’ve left behind and secure their entry points. We do all this while making sure we always answer your calls, show up on time and clean up after the job’s done.
+                            <br>
+                            <br>
+                            It all starts when you connect with our friendly and knowledgeable customer service team to schedule an initial property assessment. Our experience has taught us that behind every successful wildlife removal is a thorough understanding of the problem and a well thought out game plan. From the moment you contact us, you can expect personalized attention and expert guidance tailored to your unique situation.
+                            <br>
+                            <br>
+                            Once our team has had a chance to inspect, we’ll take the time to walk you through our findings and service options. Whether it’s explaining our process, providing detailed quotes, or answering your questions, we strive to exceed your expectations at every turn. We believe in transparency, honesty, and integrity in every interaction. You can count on us to be there throughout the process to ensure your home is free of wildlife and protected for the future. Join countless homeowners who have relied on us to solve their wildlife problems with efficiency and care.
+                            <br>
+                            <br>
+                            Thank you for considering Skedaddle for your wildlife control needs. Let us take the stress out of wildlife management so you can get back to the things in your life you truly care about.
+                        </p>
+                    </div>
+
+
+
+                    <div class="max-w-5xl mx-auto">
+                        <div class="aspect-w-16 aspect-h-9 mb-8">
+                          <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg overflow-hidden">
+                            <img 
+                              class="absolute inset-0 w-full h-full object-cover rounded-lg" 
+                              src="{{ url_for('static', filename='img/about/Skedaddle-technician-speaks-with-client-scaled-1.jpg') }}" 
+                              alt="Wildlife Control Services"
+                            >
+                          </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="text-left mb-12 max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                            SKEDADDLE’S STORY
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Skedaddle’s story began in 1989 when Founder and President Bill Dowd got into the wildlife control business with the goal of resolving client’s wildlife problems using humane methods. At that time trapping and relocating wild animals was the most common approach used by exterminators and trappers. Bill soon realized that wildlife that are trapped and relocated have slim chances of survival in their new environments and that most service providers were offering homeowners very little in the way of preventing future incidents. It was pretty clear that trapping wasn’t going to get rid of all the wild animals in the city and homeowners needed better solutions when they got too close to comfort.
+                            <br>
+                            <br>
+                            Skedaddle has grown from humble beginnings, Bill’s first office was his childhood bedroom in Hamilton, Ontario. His mother was his first employee, serving as receptionist. Armed with a pager and a service van, Bill placed an ad in the phonebook and calls began to roll in from across Southern Ontario. Each day presented new and unique challenges to overcome, but each grateful client convinced Bill he was on to something.
+                            <br>
+                            <br>
+                            “Since the day I got started, my mission has remained unchanged: to provide humane wildlife removal services that homeowners can trust. That trust, forged in the earliest days of our company, remains the cornerstone of everything we do. As we’ve grown, we’ve never lost sight of the importance of being there for our clients when they need us most.” said Bill Dowd, Skedaddle President & CEO.
+                        </p>
+                    </div>
+
+
+   
+                    <div class="max-w-5xl mx-auto">
+    
+                        <div class="aspect-w-16 aspect-h-9 mb-8">
+                            <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg">
+                                <iframe
+                                class="absolute inset-0 w-full h-full rounded-lg"
+                                src="https://www.youtube.com/embed/9qPMU-EeSg0"
+                                title="Wildlife Control Services"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-12 max-w-5xl mx-auto text-left">
+                        <p class="text-gray-600 mb-8">
+                            Along the way, techniques, equipment and systems were developed to find humane solutions to all sorts of wildlife conflicts. A typical day might start with removing a raccoon family from an attic, then racing to capture a bat flying around a living room and capping it all off going face to face with a skunk burrowed below a front porch.
+                            <br>
+                            <br>
+                            In just a few short years Skedaddle was ready to grow, launching new locations in Ottawa and later Montreal. By 2013, success in new markets led to further expansion through franchising with local owners and operators eager to join the Skedaddle team. Today Skedaddle provides service in over 40 locations across Ontario, Quebec, Nova Scotia, British Columbia as well as Wisconsin, Maryland and Minnesota in the United States. Skedaddle remains excited to continue growing and helping homeowners across North America.
+                        </p>
+                    </div>
+
+                    <div class="max-w-5xl mx-auto">
+                        <div class="aspect-w-16 aspect-h-9 mb-8">
+                          <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg overflow-hidden">
+                            <img 
+                              class="absolute inset-0 w-full h-full object-cover rounded-lg" 
+                              src="{{ url_for('static', filename='img/about/Skedaddle-spring-tune-up-technicians-team-photo-March-2023-scaled.jpg') }}" 
+                              alt="Wildlife Control Services"
+                            >
+                          </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="text-left mb-12 max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                            WHY CHOOSE US?
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Skedaddle has been your trusted partner in humane wildlife control since 1989. With locations spanning across Canada and the United States, we’ve honed our expertise in providing comprehensive wildlife removal, cleanup, and prevention services. When you choose us, you’re not just hiring a wildlife control company – you’re selecting a team dedicated to your satisfaction and the well-being of both you and the wildlife involved.
+                            <br>
+                            <br>
+                            <b>Humane Methods:</b> We believe in ethical treatment of wildlife, using humane methods approved by SPCAs and Humane Societies. Our long-standing relationships with these organizations attest to our commitment to compassionate practices.
+                            <br>
+                            <br>
+                            <b>Full-Service Solutions:</b> From initial assessment to removal, cleanup, and prevention, we handle every aspect of your wildlife control needs. Our goal is to provide you with a hassle-free experience from start to finish.
+                            <br>
+                            <br>
+                            <b>Lifetime Guarantee:</b> We stand behind the quality of our workmanship and materials. That’s why we offer a lifetime warranty on the products we install to keep wildlife out of your home, giving you peace of mind for years to come.
+                            <br>
+                            <br>
+                            <b>Dedicated Customer Service:</b> Our friendly and knowledgeable customer service team is here to guide you through every step of the process. We understand that dealing with wildlife issues can be stressful, and we’re here to provide support and assistance whenever you need it.
+                            <br>
+                            <br>
+                            <b>Trained Professionals:</b> Our team of technicians are trained in wildlife biology, home repair, decontamination and restoration to take on any challenge. Wildlife can be unpredictable and drawing on over 30 years of experience helps us ensure we get the job done right.
+                            <br>
+                            <br>
+                            <b>Safety First:</b> We prioritize the safety of our clients and staff at all times. Our team is highly trained in safe wildlife handling procedures and takes every precaution to protect you and your family throughout the process. Our team goes where the wildlife go with tools, equipment and training to safely access and work at heights.
+                            <br>
+                            <br>
+                            <b>Proven Process:</b> With years of experience behind us, we’ve developed a proven and consultative process for resolving wildlife conflicts. We tailor our approach to your specific situation, ensuring effective and lasting results.
+                            <br>
+                            <br>
+                            <b>Community Minded:</b> Our teams are proud to serve the communities we call home. That’s why you’ll find us supporting humane societies, SPCAs and wildlife rehabilitators by donating and volunteering our time. We’re proud to share our knowledge about urban wildlife to help reduce conflict between people and wildlife.
+                        </p>
+                    </div>
+
+                    <div class="max-w-5xl mx-auto">
+    
+                        <div class="aspect-w-16 aspect-h-9 mb-8">
+                            <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg">
+                                <iframe
+                                class="absolute inset-0 w-full h-full rounded-lg"
+                                src="https://www.youtube.com/embed/ViML2RQnqmo"
+                                title="Wildlife Control Services"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section class="bg-gray-50 py-16">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap items-center justify-between">
+                        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                            <h2 class="text-3xl font-bold mb-2">CALL US TODAY</h2>
+                            <a href="tel:1.888.592.0387" class="text-4xl text-primary font-bold block mb-4">1.888.592.0387</a>
+                            <p class="text-xl mb-4">OR</p>
+                            <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">Request for Services</button>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <img src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" alt="Service Vehicles" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    {% endblock %}
+    
+{% endblock %}
+
