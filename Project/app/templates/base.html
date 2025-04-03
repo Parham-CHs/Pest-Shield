@@ -468,22 +468,69 @@
 
 
       // Form submission
-      document.querySelector("form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData);
-        console.log("Form submitted:", data);
-        const notification = document.createElement("div");
-        notification.className =
-          "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-500 translate-y-0";
-        notification.textContent = "Message sent successfully!";
-        document.body.appendChild(notification);
-        setTimeout(() => {
-          notification.style.transform = "translateY(150%)";
-          setTimeout(() => notification.remove(), 300);
-        }, 3000);
-        e.target.reset();
+      document.querySelector("form").addEventListener("submit", async (e) => {
+        e.preventDefault(); // Prevents default form submission
+
+        const formData = new FormData(e.target); // Collects the form data
+        const data = Object.fromEntries(formData); // Converts to JS object
+
+        try {
+          const response = await fetch("http://127.0.0.1:5000/api/contact", {
+            method: "POST", // Send data using POST
+            headers: {
+              "Content-Type": "application/json", // Tell server we're sending JSON
+            },
+            body: JSON.stringify(data), // Convert object to JSON string
+          });
+
+          if (!response.ok) throw new Error("Failed to send message");
+
+          // Show success message
+          const notification = document.createElement("div");
+          notification.className =
+            "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-500 translate-y-0";
+          notification.textContent = "Message sent successfully!";
+          document.body.appendChild(notification);
+
+          setTimeout(() => {
+            notification.style.transform = "translateY(150%)";
+            setTimeout(() => notification.remove(), 300);
+          }, 3000);
+
+          e.target.reset(); // Clears form fields
+        } catch (error) {
+          console.error("Error:", error);
+
+          // Show error message
+          const notification = document.createElement("div");
+          notification.className =
+            "fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-500 translate-y-0";
+          notification.textContent = "Failed to send message!";
+          document.body.appendChild(notification);
+
+          setTimeout(() => {
+            notification.style.transform = "translateY(150%)";
+            setTimeout(() => notification.remove(), 300);
+          }, 3000);
+        }
       });
+
+      // document.querySelector("form").addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   const formData = new FormData(e.target);
+      //   const data = Object.fromEntries(formData);
+      //   console.log("Form submitted:", data);
+      //   const notification = document.createElement("div");
+      //   notification.className =
+      //     "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-500 translate-y-0";
+      //   notification.textContent = "Message sent successfully!";
+      //   document.body.appendChild(notification);
+      //   setTimeout(() => {
+      //     notification.style.transform = "translateY(150%)";
+      //     setTimeout(() => notification.remove(), 300);
+      //   }, 3000);
+      //   e.target.reset();
+      // });
 
 
       // Tailwind
@@ -511,6 +558,9 @@
       };
     </script>
 
+    <!-- add page script -->
+    {% block script %}
+    {% endblock %}
     
 </body>
 </html>
