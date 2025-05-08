@@ -26,9 +26,9 @@ def init_routes(app):
     def about():
         return render_template('about/about.html')
 
-    @app.route('/about2')
-    def about2():
-        return render_template('about/about2.html')
+    @app.route('/about/process')
+    def process():
+        return render_template('about/process.html')
 
     @app.route('/contact')
     def contact():
@@ -59,3 +59,16 @@ def init_routes(app):
     @app.route('/blog')
     def blog():
         return render_template('blog/blog.html')
+    
+
+    @app.route('/submission_list')
+    def submission_list():
+        # Query all submissions, ordered by newest first
+        submissions = ContactSubmission.query.order_by(ContactSubmission.submitted_at.desc()).all()
+        
+        return render_template("submission/submission.html", submissions=submissions)
+
+
+    @app.route('/base')
+    def base():
+        return render_template('base.html')
