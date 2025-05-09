@@ -19,6 +19,10 @@
       :where([class^="ri-"])::before { content: "\f3c2"; }
     </style>
 
+<!-- // primary: "17AF60",
+// primary: "#4CAF50", -->
+<!-- secondary: "#8BC34A", -->
+
 
     <script>
       // Tailwind
@@ -26,9 +30,10 @@
           theme: {
           extend: {
               colors: {
-              primary: "#4CAF50",
+              primary: "#17AF60",
               secondary: "#8BC34A",
-              },
+
+            },
               borderRadius: {
               none: "0px",
               sm: "4px",
@@ -52,7 +57,7 @@
         .service-icon {
             width: 120px;
             height: 120px;
-            background: #4caf50;
+            background: #17AF60;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -77,10 +82,14 @@
               
               <!-- Pest Shield -->
               <div class="flex items-center">
-                <a href="#" class="text-2xl font-['Pacifico'] text-primary"
+                <!-- <a href="{{ url_for('home') }}" class="text-2xl font-['Pacifico'] text-primary"
                   >Pest Shield</a
-                >
+                > -->
+                <a href="{{ url_for('home') }}">
+                  <img src="{{ url_for('static', filename='./img/logo/pestshield3.png') }}" alt="Pest Shield Logo" class="h-12">
+                </a>
               </div>
+
 
               <!-- hidden mobile menu -->
               <div class="md:hidden">
@@ -179,9 +188,6 @@
                       >Location</a
                     >
 
-                    <!-- blog -->
-                    <a href="#" class="text-gray-700 hover:text-primary transition-colors duration-500">Blog</a>
-                    
                     <!-- wildlife -->
                     <a
                       href="tel:1-888-WILDLIFE"
@@ -198,13 +204,14 @@
                 <a
                   href="tel:1-888-WILDLIFE"
                   class="hidden md:block text-primary font-semibold"
-                  >1-888-WILDLIFE</a
-                >
-                <button
-                  class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90"
+                  >Call Us: 289-894-8484                  
+                </a>
+                <a
+                   href="{{ url_for('contact') }}"
+                  class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90"
                 >
                   Get Help Now
-                </button>
+                </a>
               </div>
             </div>
             
@@ -220,12 +227,11 @@
                   Services
                   <i class="ri-arrow-down-s-line ml-1"></i>
                 </a>
-                <div class="absolute top-full left-0 pt-2 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
-                  <a href="{{ url_for('services_page' , animal='raccoon') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Raccoon</a>
-                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Wildlife Removal</a>
-                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Prevention</a>
-                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Damage Repair</a>
-                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Consultation</a>
+                <div class="absolute top-full left-0 pt-2 bg-gray-50 rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
+                  <a href="{{ url_for('services_page' , animal='WildlifeRemoval') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Wildlife Removal</a>
+                  <a href="{{ url_for('services_page' , animal='PestControlServices') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Pest Control Services</a>
+                  <a href="{{ url_for('services_page' , animal='Residential') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Residential</a>
+                  <a href="{{ url_for('services_page' , animal='Commercial') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Commercial</a>
                 </div>
               </div>
 
@@ -236,11 +242,11 @@
                   about
                   <i class="ri-arrow-down-s-line ml-1"></i>
                 </a>
-                <div class="absolute top-full left-0 pt-2 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
-                  <a href="{{ url_for('about2') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Process</a>
-                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Team</a>
+                <div class="absolute top-full left-0 pt-2 bg-gray-50 rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
+                  <a href="{{ url_for('process') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Process</a>
+                  <!-- <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Team</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Testimonials</a>
-                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Careers</a>
+                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Careers</a> -->
                 </div>
               </div>
             
@@ -248,18 +254,18 @@
               <div class="relative group">
                 <a href="{{ url_for('contact') }}" class="text-gray-700 hover:text-primary flex items-center">
                   Contact
-                  <i class="ri-arrow-down-s-line ml-1"></i>
+                  <!-- <i class="ri-arrow-down-s-line ml-1"></i> -->
                 </a>
-                <div class="absolute top-full left-0 pt-2 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
+                <!-- <div class="absolute top-full left-0 pt-2 bg-gray-50 rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 delay-150 w-48">
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Get Quote</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Emergency Service</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Support</a>
                   <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">FAQ</a>
-                </div>
+                </div> -->
               </div>
             
               <a href="{{ url_for('location') }}" class="text-gray-700 hover:text-primary">Location</a>
-              <a href="{{ url_for('blog') }}" class="text-gray-700 hover:text-primary">Blog</a>
+              <!-- <a href="{{ url_for('blog') }}" class="text-gray-700 hover:text-primary">Blog</a> -->
             </nav>
             
 
@@ -282,9 +288,12 @@
               <div class="flex flex-wrap items-center justify-between">
                   <div class="w-full md:w-1/2 mb-8 md:mb-0">
                       <h2 class="text-3xl font-bold mb-2">CALL US TODAY</h2>
-                      <a href="tel:1.888.592.0387" class="text-4xl text-primary font-bold block mb-4">1.888.592.0387</a>
+                      <a href="tel:289-894-8484" class="text-4xl text-primary font-bold block mb-4">289-894-8484</a>
                       <p class="text-xl mb-4">OR</p>
-                      <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">Request for Services</button>
+                      <a href="{{ url_for('contact') }}" 
+                      class="inline-block bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">
+                      Request for Services
+                      </a>
                   </div>
                   <div class="w-full md:w-1/2">
                       <img src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" alt="Service Vehicles" class="rounded-lg shadow-lg">
@@ -313,42 +322,42 @@
               <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
               <ul class="space-y-2">
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white">Home</a>
+                  <a href="{{ url_for('home') }}" class="text-gray-400 hover:text-white">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white">Services</a>
+                  <a href="{{ url_for('services_main') }}" class="text-gray-400 hover:text-white">Services</a>
                 </li>
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+                  <a href="{{ url_for('about') }}" class="text-gray-400 hover:text-white">About Us</a>
                 </li>
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                  <a href="{{ url_for('contact') }}" class="text-gray-400 hover:text-white">Contact</a>
                 </li>
               </ul>
             </div>
 
-            <!-- Services -->
+            <!-- Services -->             
             <div>
               <h4 class="text-lg font-semibold mb-4">Services</h4>
               <ul class="space-y-2">
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white"
+                  <a href="{{ url_for('services_page' , animal='WildlifeRemoval') }}" class="text-gray-400 hover:text-white"
                     >Wildlife Removal</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white"
-                    >Prevention</a
+                  <a href="{{ url_for('services_page' , animal='PestControlServices') }}" class="text-gray-400 hover:text-white"
+                    >Pest Control Services</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white"
-                    >Damage Repair</a
+                  <a href="{{ url_for('services_page' , animal='Residential') }}" class="text-gray-400 hover:text-white"
+                    >Residential</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="text-gray-400 hover:text-white"
-                    >Consultation</a
+                  <a href="{{ url_for('services_page' , animal='Commercial') }}" class="text-gray-400 hover:text-white"
+                    >Commercial</a
                   >
                 </li>
               </ul>
@@ -360,18 +369,18 @@
               <ul class="space-y-2">
                 <li class="flex items-center space-x-2">
                   <i class="ri-phone-line"></i>
-                  <span class="text-gray-400">1-888-WILDLIFE</span>
+                  <span class="text-gray-400">289-894-8484</span>
                 </li>
                 <li class="flex items-center space-x-2">
                   <i class="ri-mail-line"></i>
                   <span class="text-gray-400">info@PestShield.com</span>
                 </li>
-                <li class="flex items-center space-x-2">
+                <!-- <li class="flex items-center space-x-2">
                   <i class="ri-map-pin-line"></i>
                   <span class="text-gray-400"
-                    >123 Nature Street, Wildlife City</span
+                    >TOBECHANGED</span
                   >
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -532,30 +541,6 @@
       //   e.target.reset();
       // });
 
-
-      // Tailwind
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#4CAF50",
-              secondary: "#8BC34A",
-            },
-            borderRadius: {
-              none: "0px",
-              sm: "4px",
-              DEFAULT: "8px",
-              md: "12px",
-              lg: "16px",
-              xl: "20px",
-              "2xl": "24px",
-              "3xl": "32px",
-              full: "9999px",
-              button: "8px",
-            },
-          },
-        },
-      };
     </script>
 
     <!-- add page script -->
