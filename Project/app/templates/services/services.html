@@ -7,7 +7,7 @@
 
 {% block content %}
 
-    {% block animals_list %}
+    <!-- {% block animals_list %}
      <section class="py-8 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
@@ -63,20 +63,21 @@
         </div>
     </section>
     
-    {% endblock %}
+    {% endblock %} -->
 
 
-    {% block services_content %}
+
+      {% block services_header %}
 
 
             <div class="w-full">
                 <div class="relative">
                 <img src="{{ url_for('static', filename='img/animals/Services-Page-Banner-Image-Crop-scaled.jpg') }}" class="w-full h-auto">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gray-700/80 py-4 px-4">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gray-700/80 py-3 px-4">
                         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
                             <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-0">Need help today? Don't wait</h3>
-                            <a href="#" class="bg-primary hover:bg-[#7CB342] text-white px-6 py-3 !rounded-button font-semibold whitespace-nowrap flex items-center">
-                                <span class="mr-2">FIND A LOCATION</span>
+                            <a href="{{ url_for('contact') }}" class="bg-primary hover:bg-[#7CB342] text-white px-5 py-2 !rounded-button font-semibold whitespace-nowrap flex items-center">
+                                <span class="mr-2">Request for Services</span>
                                 <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
@@ -84,32 +85,41 @@
                 </div>
             </div>
 
+    
+        {% endblock %}
 
-            <section class="py-16 bg-gray-50">
+
+        {% block services_content %}
+
+
+            <section class="py-16">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
                     <div class="text-center mb-12 max-w-5xl mx-auto">
                         <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                        See Us in Action
+                        Residential & Commercial Pest Control You Can Count On
                         </h2>
-                        <p class="text-gray-600 mb-8">
-                        When wildlife makes its way into your home it can create unwanted stress for you and your family. When this unfortunate circumstance arises, most homeowners are left with many tough questions. How did they get into my house? How do I keep them out? What kind of damage have they done?
-                
-                        No need to worry, Skedaddle Humane Wildlife Control has you covered. Since 1989, we’ve been employing industry-leading removal and exclusion techniques. Our friendly and knowledgeable staff take the time to understand your unique situation and implement a customized solution that guarantees superior results.
-                        
-                        We don’t just drop off a trap and cross our fingers and we never use harmful poisons or chemicals. When it comes to controlling critters our technicians roll up their sleeves to make sure the job is done right. That means climbing roofs, crawling in attics and using hands-on techniques that keep animals out for good.
-                        
-                        Our proven three-step process ensures that your home and family are protected as part of the Skedaddle Humane Wildlife Control service experience.
+                        <p class="text-left text-gray-600 mb-8">
+                            Whether it’s your home or business, pests don’t belong there. At Pest Shield, we provide fast, effective, and
+                            discreet pest control solutions tailored to your needs. From ants and cockroaches to rodents and wasps, we
+                            handle it all—safely and professionally.
+                            <br>
+                            <br>
+                            Protect your family, your customers, and your reputation. Our licensed technicians use industry-leading
+                            methods to eliminate pests and keep them out for good.
+                            <br>
+                            <br>
+                            Call now for a free inspection and see the Pest Shield difference!
                         </p>
                     </div>
     
-                    <div class="max-w-5xl mx-auto">
+                    <!-- <div class="max-w-5xl mx-auto">
     
                         <div class="aspect-w-16 aspect-h-9 mb-8">
                             <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg">
                                 <iframe
                                 class="absolute inset-0 w-full h-full rounded-lg"
-                                src="https://www.youtube.com/embed/9qPMU-EeSg0"
+                                src="https://www.youtube.com/embed/TOBECHANGED"
                                 title="Wildlife Control Services"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -117,7 +127,7 @@
                                 ></iframe>
                             </div>
                         </div>
-    
+                        
     
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-8">
     
@@ -142,44 +152,12 @@
                             </div>
     
                         </div>
-                    </div>
-    
-                    <div class="mb-12 max-w-5xl mx-auto text-left">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                        See Us in Action
-                        </h2>
-                        <p class="text-gray-600 mb-8">
-                        When wildlife makes its way into your home it can create unwanted stress for you and your family. When this unfortunate circumstance arises, most homeowners are left with many tough questions. How did they get into my house? How do I keep them out? What kind of damage have they done?
-                
-                        No need to worry, Skedaddle Humane Wildlife Control has you covered. Since 1989, we’ve been employing industry-leading removal and exclusion techniques. Our friendly and knowledgeable staff take the time to understand your unique situation and implement a customized solution that guarantees superior results.
-                        
-                        We don’t just drop off a trap and cross our fingers and we never use harmful poisons or chemicals. When it comes to controlling critters our technicians roll up their sleeves to make sure the job is done right. That means climbing roofs, crawling in attics and using hands-on techniques that keep animals out for good.
-                        
-                        Our proven three-step process ensures that your home and family are protected as part of the Skedaddle Humane Wildlife Control service experience.
-                        </p>
-                    </div>
-    
-                    <!-- With loading state and transition -->
-                    <div class="max-w-5xl mx-auto">
-                        <div class="aspect-w-16 aspect-h-9 mb-8">
-                        <div class="w-full h-0 pb-[56.25%] relative bg-gray-200 rounded-lg overflow-hidden group">
-                            <img 
-                            class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-90" 
-                            src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" 
-                            alt="Wildlife Control Services"
-                            loading="lazy"
-                            onload="this.style.opacity=1"
-                            >
-                            <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-12 h-12 text-gray-400 animate-pulse" ...></svg>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                    </div> -->
     
                 </div>
             </section>
 
+            <!-- 
             <section class="py-20">
                 <div class="container mx-auto px-4">
                     <div class="space-y-24">
@@ -224,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
 
     {% endblock %}
