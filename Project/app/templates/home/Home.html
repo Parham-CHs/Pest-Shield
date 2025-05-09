@@ -4,10 +4,9 @@
 {% block content %}
 
       <!-- 1- image and title Humane Wildlife Management Solutions -->
-      <section
+      <!-- <section
         class="relative h-[600px] flex items-center"
-        style="background: url('../static/img/bg-jng.jpg') center/cover" 
-        >        <!-- style="background: url('{{ url_for('static', filename='img/bg-jng.jpg') }}') center/cover" -->
+        style="background: url('../static/img/bg-jng.jpg') center/cover">
 
         <div class="absolute inset-0 bg-black/30"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,12 +33,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- 2- HUMANE WILDLIFE REMOVAL
               LIFETIME GUARANTEE 
               FREQUENTLY ASKED QUESTIONS -->
-      <section class="py-16">
+      <!-- <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center">
@@ -128,7 +127,61 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+
+      <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-left mb-12 max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Why You Need Wildlife and Pest Services
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  Unwanted wildlife on your property isn’t just a nuisance—it can pose serious risks to your home, health, and
+                  safety. Animals like raccoons, squirrels, skunks, and bats often seek shelter in attics, basements, and crawl
+                  spaces, causing damage to insulation, wiring, and structures. They may also carry diseases and parasites that
+                  threaten your well-being.                </p>
+                <p class="text-gray-600 mb-8">
+                  Professional wildlife removal ensures humane, safe, and effective solutions. Experts identify entry points,
+                  remove animals without harm, and implement exclusion techniques to prevent future infestations. Protect your
+                  property and your peace of mind with reliable wildlife control.
+                </p>
+            </div>
+
+            <div class="text-left mb-8 max-w-5xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Pest activity as weather warms into spring
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  As temperatures rise, pest activity surges. From ants and wasps to rodents and cockroaches, spring
+                  marks the return of unwanted invaders. Whether you’re a homeowner or a business owner, Pest
+                  Shield offers proactive pest control services designed to keep your space protected all season long.
+                </p>
+            </div>
+            
+            <div class="text-left mb-8 max-w-5xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  All Season pest control
+                </h3>
+                <p class="text-gray-600 mb-8">
+                  Pests don’t take a season off—and neither do we. Pest Shield offers comprehensive, all-season pest
+                  control for residential and commercial properties. Whether it’s spring insects, summer wasps, fall
+                  invaders, or winter rodents, our experts provide consistent, effective protection all year long.
+                </p>
+            </div>
+
+            <div class="flex items-center justify-center space-x-4 pl-4"> <!-- Added justify-center -->
+                <button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/80 mx-1">
+                  Book Local Service
+                </button>
+                <button class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-secondary/80  mx-1">
+                  Get a Fast Quote
+                </button>
+              </div>
+        </div>
+    </section>
+
+
 
       <!-- 3- three items and Our Wildlife Services -->
       <section class="py-16 bg-gray-50">
@@ -256,7 +309,7 @@
       </section>
 
       <!-- 5- Common Wildlife Problems We Solve -->
-      <section class="py-16 bg-gray-50">
+      <!-- <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">
@@ -333,10 +386,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       
       <!-- 6- See Us in Action -->
-      <section class="py-16">
+      <!-- <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">
@@ -354,7 +407,7 @@
               >
                 <iframe
                   class="absolute inset-0 w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/9qPMU-EeSg0"
+                  src="https://www.youtube.com/embed/TOBECHANGED"
                   title="Wildlife Control Services"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -384,7 +437,8 @@
             </div>
           </div>
         </div>
-      </section>
+      </section>  -->
+   
 
       <!-- 7- get Professional  help -->
       <!-- <section class="py-16 bg-gray-50">
@@ -448,6 +502,7 @@
           </div>
         </div>
       </section> -->
+
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
@@ -523,22 +578,4 @@
       </section>
       
 
-{% endblock %}
-
-{% block call_us %}
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-wrap items-center justify-between">
-            <div class="w-full md:w-1/2 mb-8 md:mb-0">
-                <h2 class="text-3xl font-bold mb-2">CALL US TODAY</h2>
-                <a href="tel:1.888.592.0387" class="text-4xl text-primary font-bold block mb-4">1.888.592.0387</a>
-                <p class="text-xl mb-4">OR</p>
-                <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">Request for Services</button>
-            </div>
-            <div class="w-full md:w-1/2">
-                <img src="{{ url_for('static', filename='img/Service-Vehicles.jpg') }}" alt="Service Vehicles" class="rounded-lg shadow-lg">
-            </div>
-        </div>
-    </div>
-  </section>
 {% endblock %}
