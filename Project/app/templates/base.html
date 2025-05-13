@@ -118,20 +118,31 @@
                       </button>
                       
                       <div id="servicesSubmenu" class="max-h-0 overflow-hidden pl-4 space-y-2 transition-all duration-500 ease-in-out">
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
+                        <a href="{{ url_for('services_main') }}"
+                        class="block text-gray-700 hover:text-primary transition-colors duration-500"
+                         >Our Services</a
+                       >
+                        <a href="{{ url_for('services_page' , animal='WildlifeRemoval') }}"
+                         class="block text-gray-700 hover:text-primary transition-colors duration-500"
                           >Wildlife Removal</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Prevention</a
+                        <a href="{{ url_for('services_page' , animal='PestControlServices') }}"
+                         class="block text-gray-700 hover:text-primary transition-colors duration-500"
+                          >Pest Control Services</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Damage Repair</a
+                        <a href="{{ url_for('services_page' , animal='Residential') }}"
+                         class="block text-gray-700 hover:text-primary transition-colors duration-500"
+                          >Residential</a
                         >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Consultation</a
+                        <a href="{{ url_for('services_page' , animal='Commercial') }}"
+                         class="block text-gray-700 hover:text-primary transition-colors duration-500"
+                          >Commercial</a
                         >
                       </div>
                     </div>
+
+
+
 
                     <!-- about -->
                     <div class="space-y-2">
@@ -143,56 +154,30 @@
                         <i class="ri-arrow-down-s-line transition-transform duration-500"></i>
                       </button>
                       <div id="aboutSubmenu" class="max-h-0 overflow-hidden pl-4 space-y-2 transition-all duration-500 ease-in-out">
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Our Story</a
-                        >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Team</a
-                        >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Testimonials</a
-                        >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Careers</a
-                        >
+                        <a href="{{ url_for('about') }}" class="block text-gray-700 hover:text-primary transition-colors duration-500"
+                        >About Us</a>
+                        <a href="{{ url_for('process') }}" class="block text-gray-700 hover:text-primary transition-colors duration-500"
+                          >Process</a>
                       </div>
                     </div>
 
-                    <!-- contact -->
-                    <div class="space-y-2">
-                      <button
-                        onclick="toggleSubmenu('contactSubmenu')"
-                        class="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-500"
-                      >
-                        Contact
-                        <i class="ri-arrow-down-s-line transition-transform duration-500"></i>
-                      </button>
-                      <div id="contactSubmenu" class="max-h-0 overflow-hidden pl-4 space-y-2 transition-all duration-500 ease-in-out">
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Get Quote</a
-                        >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Emergency Service</a
-                        >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >Support</a
-                        >
-                        <a href="#" class="block text-gray-700 hover:text-primary transition-colors duration-500"
-                          >FAQ</a
-                        >
-                      </div>
-                    </div>
+
+                    <!-- Contact -->
+                    <a href="{{ url_for('contact') }}" class="text-gray-700 hover:text-primary transition-colors duration-500"
+                      >contact</a
+                    >
+
 
                     <!-- location -->
-                    <a href="#" class="text-gray-700 hover:text-primary transition-colors duration-500"
+                    <a href="{{ url_for('location') }}" class="text-gray-700 hover:text-primary transition-colors duration-500"
                       >Location</a
                     >
 
                     <!-- wildlife -->
                     <a
-                      href="tel:1-888-WILDLIFE"
+                      href="tel:289-894-8484"
                       class="text-primary font-semibold transition-colors duration-500"
-                      >1-888-WILDLIFE</a
+                      >Call Us: 289-894-8484</a
                     >
                     
                   </div>
@@ -202,7 +187,7 @@
               <!-- tel , get help -->
               <div class="flex items-center space-x-4">
                 <a
-                  href="tel:1-888-WILDLIFE"
+                  href="tel:289-894-8484"
                   class="hidden md:block text-primary font-semibold"
                   >Call Us: 289-894-8484                  
                 </a>
@@ -390,16 +375,18 @@
             <div class="text-center mb-6">
               <h4 class="text-lg font-semibold mb-4">FOLLOW US</h4>
               <div class="flex justify-center space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white">
+                <!-- <a href="#" class="text-gray-400 hover:text-white">
                   <i class="ri-twitter-fill text-2xl"></i>
-                </a>
+                </a> -->
                 <a href="#" class="text-gray-400 hover:text-white">
                   <i class="ri-facebook-fill text-2xl"></i>
                 </a>
                 <a href="#" class="text-gray-400 hover:text-white">
                   <i class="ri-youtube-fill text-2xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-white">
+                <a href="https://www.instagram.com/pestshieldgta?igsh=d2ViY2Rkd3FnNXZ4" 
+                class="text-gray-400 hover:text-white" 
+                target="_blank" rel="noopener noreferrer">
                   <i class="ri-instagram-fill text-2xl"></i>
                 </a>
                 <a href="#" class="text-gray-400 hover:text-white">
