@@ -61,14 +61,14 @@ def init_routes(app):
         return render_template('blog/blog.html')
     
 
-    @app.route('/submission_list')
-    def submission_list():
-        # Query all submissions, ordered by newest first
-        submissions = ContactSubmission.query.order_by(ContactSubmission.submitted_at.desc()).all()
+    # @app.route('/submission_list')
+    # def submission_list():
+    #     # Query all submissions, ordered by newest first
+    #     submissions = ContactSubmission.query.order_by(ContactSubmission.submitted_at.desc()).all()
         
-        return render_template("submission/submission.html", submissions=submissions)
+    #     return render_template("submission/submission.html", submissions=submissions)
 
 
-    @app.route('/base')
-    def base():
-        return render_template('base.html')
+    # @app.route('/base')
+    # def base():
+    #     return render_template('base.html')
