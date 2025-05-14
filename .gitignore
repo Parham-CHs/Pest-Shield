@@ -4,3 +4,16 @@ Project/app/__pycache__/__init__.cpython-311.pyc
 Project/__pycache__/run.cpython-311.pyc
 Project/__pycache__/config.cpython-311.pyc
 Project/.env
+Project/app/static/img/about/Skedaddle-President-Bill-Dowd-1-1024x778-1.jpg
+Project/app/static/img/about/Skedaddle-spring-tune-up-technicians-team-photo-March-2023-scaled.jpg
+Project/app/static/img/about/Skedaddle-technician-speaks-with-client-scaled-1.jpg
+Project/app/static/img/animals/Raccoon-Banner-1.webp
+Project/app/static/img/animals/Services-Page-Banner-Image-Crop-scaled1.jpg
+Project/app/static/img/animals/Squirrel-Banner-1.webp
+Project/app/test credentials.py
+Project/app/test mail2.py
+Project/app/test mail.py
+Project/app/templates/about/about3.html
+Project/app/templates/submission/submission copy 3.html
+Project/app/templates/submission/submission copy.html
+Project/app/templates/submission/submission copy 2.html
