@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 flex flex-col gap-8">
+
+          <!-- search -->
+          <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+              <div class="mb-4">
+              <div class="relative">
+                  <input type="text" id="post-search" placeholder="Search in posts..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:border-primary">
+                  <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              </div>
+              </div>
+              <div class="flex flex-wrap gap-3">
+              <div class="flex items-center">
+                  <span class="text-gray-700 mr-2 whitespace-nowrap">Filter by:</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                  <button id="sort-newest" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full text-sm whitespace-nowrap">Newest First</button>
+                  <button id="sort-oldest" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full text-sm whitespace-nowrap">Oldest First</button>
+              </div>
+              </div>
+          </div>
+
+          <!-- User Submissions -->
+          <div id="submissions-container" class="space-y-8">
+            <h2 class="text-2xl font-semibold mb-6">User Submissions</h2>
+        
+            {% for submission in submissions %}
+            <article class="bg-white p-6 rounded-lg shadow-sm submission" data-timestamp="{{ submission.submitted_at.timestamp() }}">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-xl font-semibold text-primary">
+                        {{ submission.id }} - {{ submission.first_name }} {{ submission.last_name }}
+                    </h3>
+                    <p class="text-gray-500 text-sm">{{ submission.submitted_at.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+
+                </div>
+        
+                <p class="text-gray-700"><strong>Email:</strong> {{ submission.email }}</p>
+                <p class="text-gray-700"><strong>Message:</strong> {{ submission.message }}</p>
+            </article>
+            {% endfor %}
+          </div>
+    </div>
+  </div>    
+{% endblock %}
+
+{% block script %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const submissionsContainer = document.getElementById("submissions-container");
+      const sortNewestBtn = document.getElementById("sort-newest");
+      const sortOldestBtn = document.getElementById("sort-oldest");
+      const searchInput = document.getElementById("post-search");
+
+      // Function to sort submissions
+      function sortSubmissions(order = "newest") {
+          const submissions = Array.from(submissionsContainer.children);
+          
+          // Sort based on timestamp
+          submissions.sort((a, b) => {
+              const timeA = parseFloat(a.dataset.timestamp);
+              const timeB = parseFloat(b.dataset.timestamp);
+              return order === "newest" ? timeB - timeA : timeA - timeB;
+          });
+
+          // Append sorted items back to container
+          submissions.forEach(sub => submissionsContainer.appendChild(sub));
+      }
+
+      // Function to highlight the active button and reset others
+      function setActiveButton(button) {
+          // Remove active class from both buttons
+          sortNewestBtn.classList.remove("bg-primary", "text-white");
+          sortOldestBtn.classList.remove("bg-primary", "text-white");
+
+          // Add active class to the clicked button
+          button.classList.add("bg-primary", "text-white");
+      }
+
+      // Function to search submissions
+      function searchSubmissions(query) {
+      const allSubmissions = Array.from(submissionsContainer.getElementsByClassName('submission'));
+      
+        allSubmissions.forEach(submission => {
+            const fullName = submission.querySelector('h3').textContent.toLowerCase();
+            const email = submission.querySelector('p:nth-child(2)').textContent.toLowerCase();
+            const message = submission.querySelector('p:nth-child(3)').textContent.toLowerCase();
+            
+            if (fullName.includes(query.toLowerCase()) || 
+                message.includes(query.toLowerCase()) || 
+                email.includes(query.toLowerCase())) {
+                submission.style.display = '';  // Show the submission
+            } else {
+                submission.style.display = 'none';  // Hide the submission
+            }
+        });
+      }
+   
+
+      // Set default sorting to Newest and highlight the Newest button
+      sortSubmissions("newest");
+      setActiveButton(sortNewestBtn);
+
+      // Event listeners for sorting buttons
+      sortNewestBtn.addEventListener("click", () => {
+          sortSubmissions("newest");
+          setActiveButton(sortNewestBtn);  // Highlight Newest button
+      });
+      sortOldestBtn.addEventListener("click", () => {
+          sortSubmissions("oldest");
+          setActiveButton(sortOldestBtn);  // Highlight Oldest button
+      });
+
+      // Event listener for search input
+      searchInput.addEventListener("input", function () {
+          const query = searchInput.value.trim();
+          searchSubmissions(query);
+      });
+  });
+</script>
+{% endblock %}
+
+
+
+
+{% block call_us %}
+{% endblock %}
+
+
