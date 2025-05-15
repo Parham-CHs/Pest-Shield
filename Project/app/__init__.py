@@ -18,8 +18,8 @@ def create_app():
     app.config.from_object(Config)  # Load configuration
 
     # Enable detailed logging
-    logging.basicConfig(level=logging.DEBUG)
-    app.logger.setLevel(logging.DEBUG)
+    # logging.basicConfig(level=logging.DEBUG)
+    # app.logger.setLevel(logging.DEBUG)
 
     # db.init_app(app)    # Initialize the database
     # Migrate(app, db)  # Enable migrations  
