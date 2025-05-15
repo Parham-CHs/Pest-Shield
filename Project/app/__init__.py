@@ -18,8 +18,8 @@ def create_app():
     app.config.from_object(Config)  # Load configuration
 
     # Enable detailed logging
-    # logging.basicConfig(level=logging.DEBUG)
-    # app.logger.setLevel(logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG)
+    app.logger.setLevel(logging.DEBUG)
 
     # db.init_app(app)    # Initialize the database
     # Migrate(app, db)  # Enable migrations  
@@ -32,15 +32,15 @@ def create_app():
     mail.init_app(app)
 
     # Test mail configuration during startup
-    # with app.app_context():
-    #     try:
-    #         test_msg = Message("App Startup Test", 
-    #                          recipients=["pchstmp@gmail.com"])
-    #         test_msg.body = "Flask mail configuration test"
-    #         mail.send(test_msg)
-    #         app.logger.info("✅ Startup test email sent successfully")
-    #     except Exception as e:
-    #         app.logger.error(f"❌ Mail configuration error: {str(e)}")
+    with app.app_context():
+        try:
+            test_msg = Message("App Startup Test", 
+                             recipients=["PestShieldGTA@gmail.com"])
+            test_msg.body = "Flask mail configuration test(web app)"
+            mail.send(test_msg)
+            app.logger.info("✅ Startup test email sent successfully")
+        except Exception as e:
+            app.logger.error(f"❌ Mail configuration error: {str(e)}")
 
 
     # Ensure models are imported before creating tables
