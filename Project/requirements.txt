@@ -2,4 +2,4 @@ Flask
 Flask-SQLAlchemy
 Flask-Migrate
 Jinja2
-Flask_mail
+Flask_Mail
