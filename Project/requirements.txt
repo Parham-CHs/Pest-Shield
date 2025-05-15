@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 Flask-Migrate
 Jinja2
 Flask-Mail
+python-dotenv
