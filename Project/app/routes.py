@@ -42,11 +42,21 @@ def init_routes(app):
 
     @app.route('/api/contact', methods=["POST"])
     def contact_form_submission():
-        data = request.get_json()
+        # data = request.get_json()
+        
+        # # Validate required fields
+        # required_fields = ['first_name', 'last_name', 'email', 'message']
+        # if not all(data.get(field) for field in required_fields):
+        #     return jsonify({"error": "Missing required fields"}), 400
+
+        # Get form data instead of JSON
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
+        email = request.form.get('email')
+        message = request.form.get('message')
         
         # Validate required fields
-        required_fields = ['first_name', 'last_name', 'email', 'message']
-        if not all(data.get(field) for field in required_fields):
+        if not all([first_name, last_name, email, message]):
             return jsonify({"error": "Missing required fields"}), 400
         
 
@@ -132,17 +142,17 @@ def init_routes(app):
     #     return render_template('base.html')
 
 
-    @app.route('/force-test-email')
-    def force_test_email():
-        try:
-            msg = Message(
-                "FORCED Test Email", 
-                recipients=["PestShieldGTA@gmail.com"],
-                body="Manual test email from VPS"
-            )
-            mail.send(msg)
-            app.logger.debug("✅ FORCED email sent successfully")
-            return "Email forced successfully"
-        except Exception as e:
-            app.logger.error("❌ FORCED email failed", exc_info=True)
-            return f"Email failed: {str(e)}"
+    # @app.route('/force-test-email')
+    # def force_test_email():
+    #     try:
+    #         msg = Message(
+    #             "FORCED Test Email", 
+    #             recipients=["PestShieldGTA@gmail.com"],
+    #             body="Manual test email from VPS"
+    #         )
+    #         mail.send(msg)
+    #         app.logger.debug("✅ FORCED email sent successfully")
+    #         return "Email forced successfully"
+    #     except Exception as e:
+    #         app.logger.error("❌ FORCED email failed", exc_info=True)
+    #         return f"Email failed: {str(e)}"
