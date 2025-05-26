@@ -48,7 +48,11 @@ def init_routes(app):
         required_fields = ['first_name', 'last_name', 'email', 'message']
         if not all(data.get(field) for field in required_fields):
             return jsonify({"error": "Missing required fields"}), 400
+        
 
+        app.logger.debug("Form data received: %s", request.form)
+
+        
         try:
             # Save to database
             new_message = ContactSubmission(
