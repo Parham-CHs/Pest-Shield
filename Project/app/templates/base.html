@@ -471,7 +471,7 @@
         const data = Object.fromEntries(formData); // Converts to JS object
 
         try {
-          const response = await fetch("http://127.0.0.1:5000/api/contact", {
+          const response = await fetch("/api/contact", {
             method: "POST", // Send data using POST
             headers: {
               "Content-Type": "application/json", // Tell server we're sending JSON
