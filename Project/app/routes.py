@@ -42,12 +42,12 @@ def init_routes(app):
 
     @app.route('/api/contact', methods=["POST"])
     def contact_form_submission():
-        FormData = request.form  # Make sure this is here before using `data`
+        FormData = request.get_json()
         
         # Validate required fields
         required_fields = ['first_name', 'last_name', 'email', 'message']
         if not all(FormData.get(field) for field in required_fields):
-            return jsonify({"error": "Missing required fields"}), 400
+            return jsonify({"error": "Missing required fields : {field}"}), 400
 
         app.logger.debug("Form data received: %s", FormData)
 
