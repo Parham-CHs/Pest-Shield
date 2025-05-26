@@ -130,3 +130,19 @@ def init_routes(app):
     # @app.route('/base')
     # def base():
     #     return render_template('base.html')
+
+
+    @app.route('/force-test-email')
+    def force_test_email():
+        try:
+            msg = Message(
+                "FORCED Test Email", 
+                recipients=["PestShieldGTA@gmail.com"],
+                body="Manual test email from VPS"
+            )
+            mail.send(msg)
+            app.logger.debug("✅ FORCED email sent successfully")
+            return "Email forced successfully"
+        except Exception as e:
+            app.logger.error("❌ FORCED email failed", exc_info=True)
+            return f"Email failed: {str(e)}"
