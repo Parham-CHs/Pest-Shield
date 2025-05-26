@@ -31,6 +31,18 @@ def create_app():
     db.init_app(app)
     mail.init_app(app)
 
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.DEBUG)
+    app.logger.addHandler(handler)
+    app.logger.setLevel(logging.DEBUG)
+
+    app.logger.debug("Mail Config:")
+    for key in app.config:
+        # if key.startswith("MAIL_"):
+        if "MAIL" in key or "DATABASE" in key:
+            app.logger.debug(f"{key} = {app.config[key]}")
+
+
     # Test mail configuration during startup
     with app.app_context():
         try:
